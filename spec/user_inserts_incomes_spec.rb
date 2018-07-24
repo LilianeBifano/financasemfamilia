@@ -17,7 +17,6 @@ feature 'User inserts your own incomes' do
         fill_in 'Descrição da receita:', with: 'Pagamento de férias'
         fill_in 'Valor da receita:', with: 'R$ 2.000,00'
         select 'Férias', from: 'Tipo de receita'
-        choose 'Usual'
 
         click_on 'Registrar'
 
