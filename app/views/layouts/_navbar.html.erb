@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Finanças em Família</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <% if user_signed_in? %>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Minhas Configurações <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Inserir Ganhos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Inserir Gastos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Fechar o Mês</a>
+        </li>
+      </ul>
+      <form class="nav-item my-2 my-lg-0">
+        <%= current_user.email%>
+      </form>
+      <form class="nav-item my-2 my-lg-0">
+        <%= link_to I18n.t(:logout), destroy_user_session_path, method: :delete , class: 'nav-link'  %>
+      </form>
+
+    </div>
+  <% else %>
+    <li><%= link_to I18n.t(:sign_in), new_user_registration_path %></li>
+    <li><%= link_to I18n.t(:login), new_user_session_path %></li>
+  <% end %>
+</nav>
