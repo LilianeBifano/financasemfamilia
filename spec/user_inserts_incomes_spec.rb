@@ -22,6 +22,7 @@ feature 'User inserts your own incomes' do
         click_on 'Registrar'
 
         expect(page).to have_content('Receita inserida com sucesso!')
+        expect(income_month).to eq(1)
         # expect(page).to have_css()
     end
 

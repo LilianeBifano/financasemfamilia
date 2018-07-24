@@ -1,113 +1,112 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/campuscode03/workspace/financasemfamilia/app/controllers/expenses_controller.rb": [
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        2,
-        2,
-        null,
-        null,
-        1,
-        2,
-        2,
-        2,
-        1,
-        1,
-        null,
-        1,
-        null,
-        null,
-        null,
-        1,
-        null,
-        1,
-        2,
-        null,
-        null
-      ],
-      "/Users/campuscode03/workspace/financasemfamilia/app/controllers/application_controller.rb": [
-        1,
-        1,
-        null,
-        1,
-        null,
-        1,
-        2,
-        2,
-        null,
-        null
-      ],
-      "/Users/campuscode03/workspace/financasemfamilia/app/models/expense.rb": [
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/campuscode03/workspace/financasemfamilia/app/models/expense_type.rb": [
-        1,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/campuscode03/workspace/financasemfamilia/app/controllers/home_controller.rb": [
+      "/home/revans/workspace/Campus_Code/Projetos/Campus/financasemfamilia/app/controllers/home_controller.rb": [
         1,
         1,
         null
       ],
-      "/Users/campuscode03/workspace/financasemfamilia/app/models/income_type.rb": [
+      "/home/revans/workspace/Campus_Code/Projetos/Campus/financasemfamilia/app/controllers/application_controller.rb": [
+        1,
+        1,
         null,
+        1,
         null,
+        1,
+        0,
+        0,
         null,
         null
       ],
-      "/Users/campuscode03/workspace/financasemfamilia/app/channels/application_cable/channel.rb": [
+      "/home/revans/workspace/Campus_Code/Projetos/Campus/financasemfamilia/app/helpers/application_helper.rb": [
+        0,
+        0
+      ],
+      "/home/revans/workspace/Campus_Code/Projetos/Campus/financasemfamilia/app/models/expense.rb": [
         0,
         0,
         0,
         0
       ],
-      "/Users/campuscode03/workspace/financasemfamilia/app/channels/application_cable/connection.rb": [
+      "/home/revans/workspace/Campus_Code/Projetos/Campus/financasemfamilia/app/models/expense_type.rb": [
+        0,
+        0,
+        0,
         0,
         0,
         0,
         0
       ],
-      "/Users/campuscode03/workspace/financasemfamilia/app/helpers/application_helper.rb": [
+      "/home/revans/workspace/Campus_Code/Projetos/Campus/financasemfamilia/app/models/income_type.rb": [
         0,
+        null,
         0
       ],
-      "/Users/campuscode03/workspace/financasemfamilia/app/jobs/application_job.rb": [
-        0,
-        0
-      ],
-      "/Users/campuscode03/workspace/financasemfamilia/app/mailers/application_mailer.rb": [
-        0,
+      "/home/revans/workspace/Campus_Code/Projetos/Campus/financasemfamilia/app/models/application_record.rb": [
         0,
         0,
         0
       ],
-      "/Users/campuscode03/workspace/financasemfamilia/app/models/application_record.rb": [
-        0,
-        0,
-        0
-      ],
-      "/Users/campuscode03/workspace/financasemfamilia/app/models/user.rb": [
+      "/home/revans/workspace/Campus_Code/Projetos/Campus/financasemfamilia/app/models/user.rb": [
         0,
         null,
         null,
+        0,
+        0,
+        0
+      ],
+      "/home/revans/workspace/Campus_Code/Projetos/Campus/financasemfamilia/app/jobs/application_job.rb": [
+        0,
+        0
+      ],
+      "/home/revans/workspace/Campus_Code/Projetos/Campus/financasemfamilia/app/mailers/application_mailer.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/home/revans/workspace/Campus_Code/Projetos/Campus/financasemfamilia/app/controllers/expenses_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/home/revans/workspace/Campus_Code/Projetos/Campus/financasemfamilia/app/channels/application_cable/channel.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/home/revans/workspace/Campus_Code/Projetos/Campus/financasemfamilia/app/channels/application_cable/connection.rb": [
+        0,
         0,
         0,
         0
       ]
     },
-    "timestamp": 1532393041
+    "timestamp": 1532452666
   }
 }
