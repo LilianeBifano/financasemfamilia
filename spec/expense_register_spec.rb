@@ -2,7 +2,22 @@ require 'rails_helper'
 
 feature 'Register of expenses' do
   scenario 'successfully' do
-    visit new_expense_path
+    user = create(:user, email: 'teste@gmail.com', password: '123456')
+
+    visit root_path
+    within('.navbar') do
+      click_on 'Entrar'
+    end
+
+    fill_in 'Email', with: user.email
+    fill_in 'Senha', with: '123456'
+    within('.form-actions') do
+      click_on 'Entrar'
+    end
+
+    within('.navbar') do
+      click_on 'Inserir Gastos'
+    end
 
     fill_in 'Data', with: '01/08/2018'
     fill_in 'Descrição', with: 'Compra de calça jeans'
@@ -19,7 +34,22 @@ feature 'Register of expenses' do
   end
 
   scenario 'insuccessfully' do
-    visit new_expense_path
+    user = create(:user, email: 'teste@gmail.com', password: '123456')
+
+    visit root_path
+    within('.navbar') do
+      click_on 'Entrar'
+    end
+
+    fill_in 'Email', with: user.email
+    fill_in 'Senha', with: '123456'
+    within('.form-actions') do
+      click_on 'Entrar'
+    end
+
+    within('.navbar') do
+      click_on 'Inserir Gastos'
+    end
 
     fill_in 'Data', with: ''
     fill_in 'Descrição', with: ''
@@ -32,5 +62,10 @@ feature 'Register of expenses' do
     expect(page).to have_css('p', text: 'Descrição não pode ficar em branco')
     expect(page).to have_css('p', text: 'Valor não pode ficar em branco')
     expect(page).to have_css('p', text: 'Tipo não pode ficar em branco')
+  end
+  scenario 'try access without signed in' do
+    visit new_expense_path
+
+    expect(current_path).to eq(user_session_path)
   end
 end

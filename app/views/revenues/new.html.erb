@@ -1,0 +1,12 @@
+<h1>Registre uma nova entrada de recursos</h1>
+
+<% @revenue.errors.full_messages.each do |erro| %>
+  <p> <%= erro %></p>
+<% end %>
+<%= simple_form_for @revenue do |f| %>
+  <%= f.input :date, as: :string %>
+  <%= f.input :description%>
+  <%= f.input :value%>
+  <%= f.input :revenue_type, priority: [ 'Salário' ], collection: @revenue_types%>
+  <%= f.button :submit, 'Registrar' %>
+<% end %>

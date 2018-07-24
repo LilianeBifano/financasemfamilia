@@ -1,33 +1,9 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/campuscode03/workspace/financasemfamilia/app/controllers/expenses_controller.rb": [
+      "/Users/campuscode03/workspace/financasemfamilia/app/controllers/home_controller.rb": [
         1,
         1,
-        1,
-        null,
-        null,
-        1,
-        2,
-        2,
-        null,
-        null,
-        1,
-        2,
-        2,
-        2,
-        1,
-        1,
-        null,
-        1,
-        null,
-        null,
-        null,
-        1,
-        null,
-        1,
-        2,
-        null,
         null
       ],
       "/Users/campuscode03/workspace/financasemfamilia/app/controllers/application_controller.rb": [
@@ -37,8 +13,38 @@
         1,
         null,
         1,
-        5,
-        5,
+        14,
+        14,
+        null,
+        null
+      ],
+      "/Users/campuscode03/workspace/financasemfamilia/app/controllers/expenses_controller.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null,
+        1,
+        2,
+        2,
+        2,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        2,
         null,
         null
       ],
@@ -57,9 +63,43 @@
         null,
         null
       ],
-      "/Users/campuscode03/workspace/financasemfamilia/app/controllers/home_controller.rb": [
+      "/Users/campuscode03/workspace/financasemfamilia/app/controllers/revenues_controller.rb": [
         1,
         1,
+        1,
+        2,
+        2,
+        null,
+        null,
+        1,
+        2,
+        2,
+        2,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        2,
+        null,
+        null
+      ],
+      "/Users/campuscode03/workspace/financasemfamilia/app/models/revenue.rb": [
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/campuscode03/workspace/financasemfamilia/app/models/revenue_type.rb": [
+        1,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/campuscode03/workspace/financasemfamilia/app/channels/application_cable/channel.rb": [
@@ -93,11 +133,6 @@
         0,
         0
       ],
-      "/Users/campuscode03/workspace/financasemfamilia/app/models/income_type.rb": [
-        0,
-        null,
-        0
-      ],
       "/Users/campuscode03/workspace/financasemfamilia/app/models/user.rb": [
         0,
         null,
@@ -107,6 +142,6 @@
         0
       ]
     },
-    "timestamp": 1532468778
+    "timestamp": 1532474431
   }
 }

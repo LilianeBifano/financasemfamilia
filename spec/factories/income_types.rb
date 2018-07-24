@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :income_type do
-    name "Férias"
+    name 'Férias'
   end
 end
