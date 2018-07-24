@@ -1,7 +1,6 @@
 {
   "RSpec": {
     "coverage": {
-<<<<<<< HEAD
       "/Users/campuscode03/workspace/financasemfamilia/app/controllers/home_controller.rb": [
         1,
         1,
@@ -50,14 +49,6 @@
         null
       ],
       "/Users/campuscode03/workspace/financasemfamilia/app/models/expense.rb": [
-=======
-      "/home/revans/workspace/Campus_Code/Projetos/Campus/financasemfamilia/app/controllers/home_controller.rb": [
-        1,
-        1,
-        null
-      ],
-      "/home/revans/workspace/Campus_Code/Projetos/Campus/financasemfamilia/app/controllers/application_controller.rb": [
->>>>>>> f9fb2b17c52646c01f1173e5ee38eab2893779ad
         1,
         1,
         null,
@@ -66,7 +57,6 @@
       "/Users/campuscode03/workspace/financasemfamilia/app/models/expense_type.rb": [
         1,
         1,
-<<<<<<< HEAD
         null,
         null,
         null,
@@ -109,106 +99,49 @@
         1,
         1,
         null,
-=======
-        0,
-        0,
         null,
         null
       ],
-      "/home/revans/workspace/Campus_Code/Projetos/Campus/financasemfamilia/app/helpers/application_helper.rb": [
-        0,
-        0
-      ],
-      "/home/revans/workspace/Campus_Code/Projetos/Campus/financasemfamilia/app/models/expense.rb": [
+      "/Users/campuscode03/workspace/financasemfamilia/app/channels/application_cable/channel.rb": [
         0,
         0,
         0,
         0
       ],
-      "/home/revans/workspace/Campus_Code/Projetos/Campus/financasemfamilia/app/models/expense_type.rb": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "/home/revans/workspace/Campus_Code/Projetos/Campus/financasemfamilia/app/models/income_type.rb": [
-        0,
->>>>>>> f9fb2b17c52646c01f1173e5ee38eab2893779ad
-        null,
-        0
-      ],
-      "/home/revans/workspace/Campus_Code/Projetos/Campus/financasemfamilia/app/models/application_record.rb": [
-        0,
-        0,
-        0
-      ],
-      "/home/revans/workspace/Campus_Code/Projetos/Campus/financasemfamilia/app/models/user.rb": [
-        0,
-        null,
-        null,
-        0,
-        0,
-        0
-      ],
-      "/home/revans/workspace/Campus_Code/Projetos/Campus/financasemfamilia/app/jobs/application_job.rb": [
-        0,
-        0
-      ],
-      "/home/revans/workspace/Campus_Code/Projetos/Campus/financasemfamilia/app/mailers/application_mailer.rb": [
+      "/Users/campuscode03/workspace/financasemfamilia/app/channels/application_cable/connection.rb": [
         0,
         0,
         0,
         0
       ],
-      "/home/revans/workspace/Campus_Code/Projetos/Campus/financasemfamilia/app/controllers/expenses_controller.rb": [
+      "/Users/campuscode03/workspace/financasemfamilia/app/helpers/application_helper.rb": [
+        0,
+        0
+      ],
+      "/Users/campuscode03/workspace/financasemfamilia/app/jobs/application_job.rb": [
+        0,
+        0
+      ],
+      "/Users/campuscode03/workspace/financasemfamilia/app/mailers/application_mailer.rb": [
         0,
         0,
         0,
+        0
+      ],
+      "/Users/campuscode03/workspace/financasemfamilia/app/models/application_record.rb": [
+        0,
+        0,
+        0
+      ],
+      "/Users/campuscode03/workspace/financasemfamilia/app/models/user.rb": [
         0,
         null,
-        0,
-        0,
-        0,
-        0,
         null,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        null,
-        0,
-        0,
-        0,
-        0
-      ],
-      "/home/revans/workspace/Campus_Code/Projetos/Campus/financasemfamilia/app/channels/application_cable/channel.rb": [
-        0,
-        0,
-        0,
-        0
-      ],
-      "/home/revans/workspace/Campus_Code/Projetos/Campus/financasemfamilia/app/channels/application_cable/connection.rb": [
-        0,
         0,
         0,
         0
       ]
     },
-<<<<<<< HEAD
-    "timestamp": 1532474431
-=======
-    "timestamp": 1532452666
->>>>>>> f9fb2b17c52646c01f1173e5ee38eab2893779ad
+    "timestamp": 1532474910
   }
 }
