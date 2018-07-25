@@ -15,6 +15,7 @@ require 'rails_helper'
       end
 
       visit new_expense_path
+      
 
       expect(page).to have_content('Cadastro de Família')
       expect(user.family).to be_nil
