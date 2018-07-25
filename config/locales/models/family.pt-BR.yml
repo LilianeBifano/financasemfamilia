@@ -1,0 +1,11 @@
+pt-BR:
+  simple_form:
+    labels:
+      family:
+        name: 'Nome da Familia'
+        cep: 'CEP'
+        target: 'Objetivo'
+        target_value: 'Valor do objetivo'
+        guest_total: 'Quantidade de Pessoas'
+  submit: 'Enviar'
+  

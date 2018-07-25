@@ -10,13 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_23_221533) do
+ActiveRecord::Schema.define(version: 2018_07_25_002122) do
 
   create_table "expenses", force: :cascade do |t|
     t.string "date"
     t.string "description"
     t.string "expense_type"
     t.string "value"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "families", force: :cascade do |t|
+    t.string "name"
+    t.integer "guest_total"
+    t.string "cep"
+    t.string "target"
+    t.decimal "target_value"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -35,11 +45,12 @@ ActiveRecord::Schema.define(version: 2018_07_23_221533) do
     t.string "name"
     t.string "job"
     t.date "birthday"
-    t.string "family"
     t.string "relation_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "family_id"
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["family_id"], name: "index_users_on_family_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 

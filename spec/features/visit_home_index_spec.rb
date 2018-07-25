@@ -13,6 +13,7 @@ feature 'visit_home_index' do
   end
 
   scenario 'not view login' do
+    create(:family)
     user = create(:user)
 
     visit root_path
