@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature 'Register of expenses' do
+feature 'User inserts your own incomes' do
   scenario 'successfully' do
     user = create(:user, email: 'teste@gmail.com', password: '123456')
 
@@ -16,21 +16,17 @@ feature 'Register of expenses' do
     end
 
     within('.navbar') do
-      click_on 'Inserir Gastos'
+      click_on 'Inserir Ganhos'
     end
 
-    fill_in 'Data', with: '01/08/2018'
-    fill_in 'Descrição', with: 'Compra de calça jeans'
-    fill_in 'Valor', with: 'R$109,70'
-    select 'Vestuário e acessórios', from: 'Tipo'
+    fill_in 'Data', with: '15/05/2018'
+    fill_in 'Descrição', with: 'Pagamento de férias'
+    fill_in 'Valor', with: 'R$ 2.000,00'
+    select 'Férias', from: 'Tipo'
 
     click_on 'Registrar'
 
-    expect(page).to have_css('p', text: 'Saída de recursos cadastrada')
-    expect(page).to have_css('p', text: 'Data: 01/08/2018')
-    expect(page).to have_css('p', text: 'Descrição: Compra de calça jeans')
-    expect(page).to have_css('p', text: 'Valor: R$109,70')
-    expect(page).to have_css('p', text: 'Tipo: Vestuário e acessórios')
+    expect(page).to have_content('Entrada de recursos cadastrada')
   end
 
   scenario 'insuccessfully' do
@@ -48,7 +44,7 @@ feature 'Register of expenses' do
     end
 
     within('.navbar') do
-      click_on 'Inserir Gastos'
+      click_on 'Inserir Ganhos'
     end
 
     fill_in 'Data', with: ''
@@ -64,7 +60,7 @@ feature 'Register of expenses' do
     expect(page).to have_css('p', text: 'Tipo não pode ficar em branco')
   end
   scenario 'try access without signed in' do
-    visit new_expense_path
+    visit new_revenue_path
 
     expect(current_path).to eq(user_session_path)
   end

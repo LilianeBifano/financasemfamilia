@@ -1,0 +1,10 @@
+pt-BR:
+  activerecord:
+    models:
+      revenue: Receita
+    attributes:
+      revenue:
+        date: Data
+        description: Descrição
+        value: Valor
+        revenue_type: Tipo

@@ -1,4 +1,5 @@
 class ExpensesController < ApplicationController
+  before_action :authenticate_user!, only: %i[new show create]
   def show
     @expense = Expense.find(params[:id])
   end

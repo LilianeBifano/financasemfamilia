@@ -1,13 +1,13 @@
-<h1>Registre uma nova saída de recursos</h1>
-
-<% @expense.errors.full_messages.each do |erro| %>
-  <p> <%= erro %></p>
-<% end %>
-<%= simple_form_for @expense do |f| %>
-  <%= f.input :date %>
-  <%= f.input :description%>
-  <%= f.input :value, label: 'Valor' %>
-  <%= f.input :expense_type, priority: [ 'Alimentação' ], collection: @expense_types,
-                                   label: 'Tipo'  %>
-  <%= f.button :submit, 'Registrar' %>
-<% end %>
+<div class="box-ad">
+  <h3>Registre uma nova saída de recursos</h3>
+  <% @expense.errors.full_messages.each do |erro| %>
+    <p> <%= erro %></p>
+  <% end %>
+  <%= simple_form_for @expense do |f| %>
+    <%= f.input :date %>
+    <%= f.input :description%>
+    <%= f.input :value %>
+    <%= f.input :expense_type, priority: [ 'Alimentação' ], collection: @expense_types %>
+    <%= f.button :submit, 'Registrar' %>
+  <% end %>
+</div>
