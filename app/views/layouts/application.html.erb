@@ -7,35 +7,43 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   </head>
 
   <body>
-    <main>
+    <main style="height: 100vh;">
       <%= render "layouts/navbar" %>
-      <div class='container main'>
-        <div class="row">
-          <p><%= flash[:success] %></p>
-          <p><%= flash[:notice] %></p>
-          <p><%= flash[:alert] %></p>
-        </div>
-        <div class="text-center">
+      <section class="jumbotron text-center">
+        <div class="container">
           <%= image_tag 'icon.png', class: 'logo' %>
           <h1 class='title-welcome'>Finanças em Família</h1>
           <h4 class='subtitle-welcome'>A família em primeiro lugar.</h4>
         </div>
-        <%= yield %>
-      </div>
-    </main>
-    <div class="footer-bottom">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-            <div class="copyright"> © 2018 - CampusCode </div>
-          </div> <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-            <div class="design"> Imersão Web - Turma de Férias Julho. </div>
+      </section>
+      <div class="py-5 bg-light">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <p><%= flash[:success] %></p>
+              <p><%= flash[:notice] %></p>
+              <p><%= flash[:alert] %></p>
+              <%= yield %>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+              <div class="copyright"> © 2018 - CampusCode </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+              <div class="design"> Imersão Web - Turma de Férias Julho. </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
