@@ -82,30 +82,36 @@
         93,
         null,
         null,
-        null,
         null
       ],
       "/Users/campuscode03/workspace/financasemfamilia/app/models/cash_flow.rb": [
         1,
         1,
         null,
+        null,
         1,
+        93,
+        93,
+        93,
+        null,
+        93,
+        93,
         null,
         93,
         93,
         93,
         93,
-        93,
         null,
+        null,
+        1,
         93,
         3,
         null,
         null,
-        93,
-        93,
+        null,
+        1,
         93,
         3,
-        null,
         null,
         null,
         null,
@@ -199,6 +205,6 @@
         0
       ]
     },
-    "timestamp": 1532640239
+    "timestamp": 1532643124
   }
 }
