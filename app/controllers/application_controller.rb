@@ -10,12 +10,12 @@ class ApplicationController < ActionController::Base
   end
 
   def check_family_registered
-    return unless return_conditions
+    return unless user_has_family?
     flash[:error] = 'Usuário não possui Familia'
     redirect_to new_family_path
   end
 
-  def return_conditions
+  def user_has_family?
     return unless user_signed_in? && current_user.family.nil?
     return if request.path.eql?(new_family_path)
     return if request.path.eql?(families_path)
