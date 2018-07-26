@@ -3,8 +3,7 @@ require 'rails_helper'
 feature 'Register of expenses' do
   scenario 'successfully' do
     family = create(:family)
-    user = create(:user, email: 'teste@gmail.com', password: '123456', family: family)
-
+    user = create(:user, family: family)
 
     visit root_path
     within('.navbar') do
@@ -12,7 +11,7 @@ feature 'Register of expenses' do
     end
 
     fill_in 'Email', with: user.email
-    fill_in 'Senha', with: '123456'
+    fill_in 'Senha', with: user.password
     within('.form-actions') do
       click_on 'Entrar'
     end

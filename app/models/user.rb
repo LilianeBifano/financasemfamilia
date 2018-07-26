@@ -6,5 +6,5 @@ class User < ApplicationRecord
 
   belongs_to :family, optional: true
 
-  has_many :expenses
+  has_many :expenses, dependent: :destroy
 end

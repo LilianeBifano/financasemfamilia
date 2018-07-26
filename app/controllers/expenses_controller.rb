@@ -10,7 +10,7 @@ class ExpensesController < ApplicationController
   end
 
   def create
-    @expense = Expense.new(expense_params)
+    @expense = current_user.expenses.new(expense_params)
     @expense_types = ExpenseType::ALL
     if @expense.save
       flash[:notice] = 'Saída de recursos cadastrada com sucesso!'
