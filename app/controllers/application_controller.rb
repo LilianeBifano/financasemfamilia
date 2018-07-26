@@ -10,10 +10,15 @@ class ApplicationController < ActionController::Base
   end
 
   def require_login
+    return unless return_conditions
+    flash[:error] = 'Usuário não possui Familia'
+    redirect_to new_family_path
+  end
+
+  def return_conditions
     return unless user_signed_in? && current_user.family.nil?
-    if !request.path.eql?(new_family_path) && !request.path.eql?(families_path)
-      flash[:error] = "Usuário não possui Familia"
-      redirect_to new_family_path
-    end
+    return if request.path.eql?(new_family_path)
+    return if request.path.eql?(families_path)
+    true
   end
 end
