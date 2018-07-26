@@ -3,7 +3,7 @@ require 'rails_helper'
 feature 'Register of expenses' do
   scenario 'successfully' do
     user = create(:user, email: 'teste@gmail.com', password: '123456')
-
+    
     visit root_path
     within('.navbar') do
       click_on 'Entrar'

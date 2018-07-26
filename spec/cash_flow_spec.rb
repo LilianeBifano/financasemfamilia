@@ -31,7 +31,7 @@ require 'rails_helper'
   
       expect(current_path).to eq cash_flow_path
       expect(page).to have_content('Entrada de recursos cadastrada')
-     #expect(page).to have_css('h3', text: 'Julho de 2018')
+      expect(page).to have_css('h3', text: 'Julho de 2018')
       expect(page).to have_css('th', text: 'Dia')
       expect(page).to have_css('td', text: '01/07/2018 Dom')
       expect(page).to have_css('td', text: '05/07/2018 Qui')
@@ -53,5 +53,11 @@ require 'rails_helper'
       expect(page).to have_css('p', text: 'Total de gastos: - R$ 110,00')
       expect(page).to have_css('p', text: 'Total do mês: R$ 6.890,00')
 
+    end
+
+    scenario '' do
+      visit cash_flow_path
+
+      expect(current_path).to eq(user_session_path)
     end
   end
