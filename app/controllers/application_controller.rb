@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
-  before_action :require_login, unless: :devise_controller?
+  before_action :check_family_registered, unless: :devise_controller?
 
   protected
 
@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up, keys: keys)
   end
 
-  def require_login
+  def check_family_registered
     return unless return_conditions
     flash[:error] = 'Usuário não possui Familia'
     redirect_to new_family_path
