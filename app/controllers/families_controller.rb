@@ -6,6 +6,7 @@ class FamiliesController < ApplicationController
   def create
     @family = Family.new(family_params)
     if @family.save
+      current_user.update(family: @family)
       flash[:notice] = 'Familia Cadastrada com Sucesso!'
       redirect_to family_path(@family)
     else

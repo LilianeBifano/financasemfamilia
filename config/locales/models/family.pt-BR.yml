@@ -7,5 +7,6 @@ pt-BR:
         target: 'Objetivo'
         target_value: 'Valor do objetivo'
         guest_total: 'Quantidade de Pessoas'
+  new_family: 'Cadastro de Família'
   submit: 'Enviar'
   

@@ -2,7 +2,7 @@ require 'rails_helper'
 
   feature 'visit_home_index' do
     scenario 'check_family_user' do
-      user = create(:user)
+      user = create(:user, family: nil)
 
       visit root_path
       within('.navbar') do
@@ -16,15 +16,16 @@ require 'rails_helper'
 
       visit new_expense_path
 
-      expect(controller.current_user).to eq(user)
+      expect(current_path).to eq(new_family_path)
       expect(page).to have_content('Cadastro de Família')
       expect(user.family).to be_nil
-      expect(current_path).to eq(new_family_path)
+      
     end
 
     scenario 'and check_family_user successfully' do
-      user = create(:user)
-      family = create (:family)
+      
+      family = create(:family)
+      user = create(:user, family: family)
 
       visit root_path
       within('.navbar') do
@@ -35,16 +36,6 @@ require 'rails_helper'
       within('.form-actions') do
         click_on 'Entrar'
       end
-
-      visit family_path
-
-      click_on 'Cadastrar Familia'
-
-      fill_in 'Nome da Familia', with: 'Silva'
-      fill_in 'Quantidade de Pessoas', with: '5'
-      click_on 'Salvar'
-
-      expect(page).to have_content('Silva')
 
       visit new_expense_path
 
