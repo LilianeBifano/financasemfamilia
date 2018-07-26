@@ -1,11 +1,9 @@
 pt-BR:
-  activerecord:
-    models:
-      user: Usuário
-      attributes:
-        user:
-          email: 'Email'
-          password: 'Senha'
+  simple_form:
+    labels:
+      user:
+        email: 'Email'
+        password: 'Senha'
   sign_up: 'Cadastrar-me'
   login: 'Entrar'
   logout: 'Sair'
