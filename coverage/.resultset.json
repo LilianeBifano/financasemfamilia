@@ -1,12 +1,12 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/campuscode03/workspace/financasemfamilia/app/controllers/home_controller.rb": [
+      "/Users/campuscode06/workspace/financafamilia/financasemfamilia/app/controllers/home_controller.rb": [
         1,
         1,
         null
       ],
-      "/Users/campuscode03/workspace/financasemfamilia/app/controllers/application_controller.rb": [
+      "/Users/campuscode06/workspace/financafamilia/financasemfamilia/app/controllers/application_controller.rb": [
         1,
         1,
         null,
@@ -18,7 +18,7 @@
         null,
         null
       ],
-      "/Users/campuscode03/workspace/financasemfamilia/app/controllers/expenses_controller.rb": [
+      "/Users/campuscode06/workspace/financafamilia/financasemfamilia/app/controllers/expenses_controller.rb": [
         1,
         1,
         1,
@@ -48,13 +48,13 @@
         null,
         null
       ],
-      "/Users/campuscode03/workspace/financasemfamilia/app/models/expense.rb": [
+      "/Users/campuscode06/workspace/financafamilia/financasemfamilia/app/models/expense.rb": [
         1,
         1,
         null,
         null
       ],
-      "/Users/campuscode03/workspace/financasemfamilia/app/models/expense_type.rb": [
+      "/Users/campuscode06/workspace/financafamilia/financasemfamilia/app/models/expense_type.rb": [
         1,
         1,
         null,
@@ -63,7 +63,7 @@
         null,
         null
       ],
-      "/Users/campuscode03/workspace/financasemfamilia/app/controllers/revenues_controller.rb": [
+      "/Users/campuscode06/workspace/financafamilia/financasemfamilia/app/controllers/revenues_controller.rb": [
         1,
         1,
         1,
@@ -89,51 +89,51 @@
         null,
         null
       ],
-      "/Users/campuscode03/workspace/financasemfamilia/app/models/revenue.rb": [
+      "/Users/campuscode06/workspace/financafamilia/financasemfamilia/app/models/revenue.rb": [
         1,
         1,
         null,
         null
       ],
-      "/Users/campuscode03/workspace/financasemfamilia/app/models/revenue_type.rb": [
+      "/Users/campuscode06/workspace/financafamilia/financasemfamilia/app/models/revenue_type.rb": [
         1,
         1,
         null,
         null,
         null
       ],
-      "/Users/campuscode03/workspace/financasemfamilia/app/channels/application_cable/channel.rb": [
+      "/Users/campuscode06/workspace/financafamilia/financasemfamilia/app/channels/application_cable/channel.rb": [
         0,
         0,
         0,
         0
       ],
-      "/Users/campuscode03/workspace/financasemfamilia/app/channels/application_cable/connection.rb": [
+      "/Users/campuscode06/workspace/financafamilia/financasemfamilia/app/channels/application_cable/connection.rb": [
         0,
         0,
         0,
         0
       ],
-      "/Users/campuscode03/workspace/financasemfamilia/app/helpers/application_helper.rb": [
+      "/Users/campuscode06/workspace/financafamilia/financasemfamilia/app/helpers/application_helper.rb": [
         0,
         0
       ],
-      "/Users/campuscode03/workspace/financasemfamilia/app/jobs/application_job.rb": [
+      "/Users/campuscode06/workspace/financafamilia/financasemfamilia/app/jobs/application_job.rb": [
         0,
         0
       ],
-      "/Users/campuscode03/workspace/financasemfamilia/app/mailers/application_mailer.rb": [
+      "/Users/campuscode06/workspace/financafamilia/financasemfamilia/app/mailers/application_mailer.rb": [
         0,
-        0,
-        0,
-        0
-      ],
-      "/Users/campuscode03/workspace/financasemfamilia/app/models/application_record.rb": [
         0,
         0,
         0
       ],
-      "/Users/campuscode03/workspace/financasemfamilia/app/models/user.rb": [
+      "/Users/campuscode06/workspace/financafamilia/financasemfamilia/app/models/application_record.rb": [
+        0,
+        0,
+        0
+      ],
+      "/Users/campuscode06/workspace/financafamilia/financasemfamilia/app/models/user.rb": [
         0,
         null,
         null,
@@ -142,6 +142,6 @@
         0
       ]
     },
-    "timestamp": 1532474910
+    "timestamp": 1532566869
   }
 }
