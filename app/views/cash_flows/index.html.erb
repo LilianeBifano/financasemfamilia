@@ -8,11 +8,17 @@
     <th>Descrição Ganhos</th>
     <th>Descrição Gastos</th>
   </tr>
-  <% Date.today.beginning_of_month..Date.today.end_of_month.each do |day| %>
-    <tr>
-      <td><%= I18n.l day, format :short %> </td>
-      <td> R$ 500,00'</td>
-    </tr>  
-  <% end%>
-</table>
   
+    <tr>
+      <% @cfs.each do |cf| %>
+        <td> <%= I18n.localize cf.date, format: :custom%> </td>
+        <td class="text-success"> <%= number_to_currency cf.revenue_value %></td>
+        <td class="text-danger"> - <%= number_to_currency cf.expense_value %> </td>
+        <td> <%= cf.revenue_type %> </td>
+        <td> <%= cf.expense_type %> </td>
+      <% end%>
+    </tr> 
+</table>
+<p>Total de ganhos: <%= number_to_currency CashFlow.calculate_revenue_amount(@cfs) %> </p>
+<p>Total de gastos: - <%= number_to_currency CashFlow.calculate_expense_amount(@cfs) %> </p>
+<p>Total do mês: <%= number_to_currency CashFlow.calculate_revenue_amount(@cfs)  - CashFlow.calculate_expense_amount(@cfs) %> </p>

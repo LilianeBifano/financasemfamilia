@@ -1,7 +1,12 @@
-class CashFlowsController
+class CashFlowsController < ApplicationController
 
-def mov_day
-  @mov_day = if Date.beginning_of_day..Date.end_of_day
-    
+  def index
+    @date = Date.parse params[:date]
+    @cfs = []
+    (@date.beginning_of_month..@date.end_of_month).each do |day|
+      cf = CashFlow.new(day)
+      @cfs << cf
+    end
+  end
 
 end

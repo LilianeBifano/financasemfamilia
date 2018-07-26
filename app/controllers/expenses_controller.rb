@@ -14,7 +14,7 @@ class ExpensesController < ApplicationController
     @expense_types = ExpenseType::ALL
     if @expense.save
       flash[:notice] = 'Saída de recursos cadastrada com sucesso!'
-      redirect_to expense_path(@expense)
+      redirect_to cash_flow_path
     else
       render 'new'
     end
