@@ -1,7 +1,10 @@
 Finanças em Família
 =======
 
-**Finanças em Família** é uma aplicação ....
+**Finanças em Família** é uma aplicação que tem por objetivo aumentar o controle financeiro das famílias, elaborando, substancialmente:
+- Análises visual dos principais gastos e ganhos da família;
+- Caixa consolidado da família.
+
 
 ## Setup do Projeto
 
