@@ -6,11 +6,11 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <% if user_signed_in? %>
+  <% if user_signed_in? && current_user.family%>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Minhas Configurações <span class="sr-only">(current)</span></a>
+          <%= link_to 'Minhas Configurações', profile_path, class: 'nav-link' %>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="<%= new_revenue_path %>">Inserir Ganhos</a>
@@ -26,12 +26,20 @@
         <%= current_user.email%>
       </form>
       <form class="nav-item my-2 my-lg-0">
-        <%= link_to I18n.t(:logout), destroy_user_session_path, method: :delete , class: 'nav-link'  %>
-      </form>
+      <%= link_to I18n.t(:logout), destroy_user_session_path, method: :delete , class: 'nav-link'  %>
+    </form>
 
     </div>
-  <% else %>
+  <% elsif !user_signed_in? %>
     <li><%= link_to I18n.t(:sign_in), new_user_registration_path %></li>
     <li><%= link_to I18n.t(:login), new_user_session_path %></li>
+
+  <% elsif user_signed_in?%>
+    <form class="nav-item my-2 my-lg-0">
+        <%= current_user.email%>
+    </form>
+    <form class="nav-item my-2 my-lg-0">
+      <%= link_to I18n.t(:logout), destroy_user_session_path, method: :delete , class: 'nav-link'  %>
+    </form>
   <% end %>
 </nav>

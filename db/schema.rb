@@ -21,6 +21,16 @@ ActiveRecord::Schema.define(version: 2018_07_25_234812) do
     t.date "date"
   end
 
+  create_table "families", force: :cascade do |t|
+    t.string "name"
+    t.integer "guest_total"
+    t.string "cep"
+    t.string "target"
+    t.decimal "target_value"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "revenues", force: :cascade do |t|
     t.string "description"
     t.decimal "value"
@@ -44,11 +54,12 @@ ActiveRecord::Schema.define(version: 2018_07_25_234812) do
     t.string "name"
     t.string "job"
     t.date "birthday"
-    t.string "family"
     t.string "relation_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "family_id"
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["family_id"], name: "index_users_on_family_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
