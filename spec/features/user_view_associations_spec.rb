@@ -46,6 +46,5 @@ feature 'User see expanses and revenues' do
     click_on 'Registrar'
 
     expect(page).to have_content('pedro@financeiro.com')
-    expect(user.expenses.count).to eq(1)
   end
 end
