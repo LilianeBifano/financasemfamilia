@@ -4,5 +4,6 @@ FactoryBot.define do
     description 'Salário mensal'
     value '5000,00'
     revenue_type 'Salário'
+    user
   end
 end
