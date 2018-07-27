@@ -1,7 +1,6 @@
 class ExpensesController < ApplicationController
-  def show
-    @expense = Expense.find(params[:id])
-  end
+  before_action :authenticate_user!, only: %i[new show create]
+  def show; end
 
   def new
     @expense = Expense.new
@@ -9,11 +8,11 @@ class ExpensesController < ApplicationController
   end
 
   def create
-    @expense = Expense.new(expense_params)
+    @expense = current_user.expenses.new(expense_params)
     @expense_types = ExpenseType::ALL
     if @expense.save
       flash[:notice] = 'Saída de recursos cadastrada com sucesso!'
-      redirect_to expense_path(@expense)
+      redirect_to cash_flow_path(date: @expense.date.beginning_of_month)
     else
       render 'new'
     end

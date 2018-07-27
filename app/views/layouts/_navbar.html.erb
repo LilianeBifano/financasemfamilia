@@ -1,5 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Finanças em Família</a>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <%= link_to root_path, class: 'navbar-brand' do %>
+    Finanças em Família
+  <% end %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -11,10 +13,10 @@
           <%= link_to 'Minhas Configurações', profile_path, class: 'nav-link' %>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Inserir Ganhos</a>
+          <a class="nav-link" href="<%= new_revenue_path %>">Inserir Ganhos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Inserir Gastos</a>
+          <a class="nav-link" href="<%= new_expense_path %>">Inserir Gastos</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Fechar o Mês</a>

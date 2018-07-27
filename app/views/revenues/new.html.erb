@@ -1,0 +1,13 @@
+<div class="box-ad">
+<h3>Registre uma nova entrada de recursos</h3>
+<% @revenue.errors.full_messages.each do |erro| %>
+  <p> <%= erro %></p>
+<% end %>
+<%= simple_form_for @revenue do |f| %>
+  <%= f.input :date, as: :string %>
+  <%= f.input :description%>
+  <%= f.input :value%>
+  <%= f.input :revenue_type, priority: [ 'Salário' ], collection: @revenue_types%>
+  <%= f.button :submit, 'Registrar' %>
+<% end %>
+</div>

@@ -31,4 +31,28 @@ feature 'Visitor setup family and login' do
     expect(page).not_to have_content('Cadastrar Familia')
     expect(page).not_to have_content('Cadastro')
   end
+
+  scenario 'and doen\'t fill all fields' do
+    create(:family)
+    user = create(:user)
+
+    visit root_path
+    within('.navbar') do
+      click_on 'Entrar'
+    end
+    fill_in 'Email', with: user.email
+    fill_in 'Senha', with: user.password
+    within('.form-actions') do
+      click_on 'Entrar'
+    end
+
+    click_on 'Minhas Configurações'
+    click_on 'Cadastrar Familia'
+
+    click_on 'Salvar'
+
+    expect(page).to have_content('Nome da Familia não pode ficar em branco')
+    expect(page).to have_content('Quantidade de Pessoas não pode ficar'\
+                                 ' em branco')
+  end
 end

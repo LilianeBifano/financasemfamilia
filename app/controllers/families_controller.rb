@@ -1,4 +1,6 @@
 class FamiliesController < ApplicationController
+  before_action :authenticate_user!
+
   def new
     @family = Family.new
   end
@@ -8,14 +10,14 @@ class FamiliesController < ApplicationController
     if @family.save
       current_user.update(family: @family)
       flash[:notice] = 'Familia Cadastrada com Sucesso!'
-      redirect_to family_path(@family)
+      redirect_to my_family_path(@family)
     else
       render 'new'
     end
   end
 
   def show
-    @family = Family.find(params[:id])
+    @family = current_user.family
   end
 
   private
