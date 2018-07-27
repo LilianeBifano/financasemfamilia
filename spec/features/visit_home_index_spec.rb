@@ -9,7 +9,6 @@ feature 'visit_home_index' do
     expect(page).not_to have_content('Minhas Configurações')
     expect(page).not_to have_content('Inserir Gastos')
     expect(page).not_to have_content('Inserir Ganhos')
-    expect(page).not_to have_content('Fechar o Mês')
   end
 
   scenario 'not view login' do
