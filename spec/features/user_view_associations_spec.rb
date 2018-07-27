@@ -47,6 +47,6 @@ feature 'User see expanses and revenues' do
     click_on 'Registrar'
 
     expect(page).to have_content('eduardo@gmail.com')
-    expect(page).to have_content('Compra de calça jeans')
+    expect(page).to have_content('Vestuário e acessórios')
   end
 end
