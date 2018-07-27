@@ -23,8 +23,7 @@ feature 'Visitor setup family and login' do
     click_on 'Salvar'
 
     expect(page).to have_content('pedro@financeiro.com')
-    expect(page).to have_content('Familia Cadastrada com Sucesso')
-    expect(page).to have_content('Familia: Silva')
+    expect(page).to have_content('Familia: Silva cadastrada com sucesso')
     expect(page).not_to have_content('Cadastrar Familia')
     expect(page).not_to have_content('Cadastro')
   end
