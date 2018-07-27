@@ -27,4 +27,30 @@ feature 'User add user in family' do
     expect(page).to have_content("Familia: #{family.name}")
     expect(family.users.count).to eq(2)
   end
+
+  scenario 'and not double users' do
+    family = create(:family)
+    user = create(:user, family: family)
+    user2 = create(:user, email: 'marcelo@financeiro.com', family: family)
+
+    visit root_path
+    within('.navbar') do
+      click_on 'Entrar'
+    end
+    fill_in 'Email', with: user.email
+    fill_in 'Senha', with: user.password
+    within('.form-actions') do
+      click_on 'Entrar'
+    end
+
+    click_on 'Minhas Configurações'
+    click_on 'Cadastrar Usuário'
+
+    fill_in 'Email', with: 'marcelo@financeiro.com'
+    fill_in 'Senha', with: '12345678'
+    fill_in 'Confirmar', with: '12345678'
+    click_on 'Cadastrar'
+
+    expect(page).to have_content('Email já está em uso')
+  end
 end
