@@ -3,12 +3,13 @@ require 'rails_helper'
 feature 'The app generate a partial cash flow' do
   scenario 'successfully' do
     user = create(:user, password: '123456')
+    user2 = create(:user, email: 'test8428@gmail.com')
     create(:revenue)
-    create(:expense)
+    create(:expense, user: user)
     create(:expense, date: '01/07/2018',
                      description: 'Compra de calça jeans',
                      expense_type: 'Vestuário e acessórios',
-                     value: '50,00')
+                     value: '50,00', user: user2)
 
     visit root_path
     within('.navbar') do
