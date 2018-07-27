@@ -27,11 +27,7 @@ feature 'Register of expenses' do
 
     click_on 'Registrar'
 
-    expect(page).to have_css('p', text: 'Saída de recursos cadastrada')
-    expect(page).to have_css('p', text: 'Data: 01/08/2018')
-    expect(page).to have_css('p', text: 'Descrição: Compra de calça jeans')
-    expect(page).to have_css('p', text: 'Valor: R$109,70')
-    expect(page).to have_css('p', text: 'Tipo: Vestuário e acessórios')
+    expect(page).to have_content('Saída de recursos cadastrada')
   end
 
   scenario 'insuccessfully' do
