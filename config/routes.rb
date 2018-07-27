@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :revenues, only: [:show, :new, :create]
   resources :families, only: [:new, :create, :index]
 
+  get 'cash_flow', to: 'cash_flows#index'
   devise_for :users
   
   root to: 'home#index'

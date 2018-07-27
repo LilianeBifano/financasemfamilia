@@ -10,7 +10,7 @@ class RevenuesController < ApplicationController
     @revenue_types = RevenueType::ALL
     if @revenue.save
       flash[:notice] = 'Entrada de recursos cadastrada com sucesso!'
-      redirect_to revenue_path(@revenue)
+      redirect_to cash_flow_path(date: @revenue.date.beginning_of_month)
     else
       render 'new'
     end
