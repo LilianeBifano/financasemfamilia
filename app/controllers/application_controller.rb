@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
   def configure_permitted_parameters
     keys = %i[name job birthday family relation_type]
     devise_parameter_sanitizer.permit(:sign_up, keys: keys)
+    devise_parameter_sanitizer.permit(:account_update, keys: keys)
   end
 
   def check_family_registered

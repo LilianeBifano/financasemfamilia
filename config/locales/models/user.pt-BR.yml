@@ -2,9 +2,20 @@ pt-BR:
   simple_form:
     labels:
       user:
+        name: 'Nome'
         email: 'Email'
         password: 'Senha'
+        current_password: 'Senha Atual'
+  activerecord:
+    models:
+      user: 'Usuário'
+  submit: 'Salvar'
+  edit_user: 'Editar Usuário'
   sign_up: 'Cadastrar-me'
   login: 'Entrar'
   logout: 'Sair'
   sign_in: 'Cadastre-se'
+  save: 'Salvar'
+  cancel_my_account: 'Cancelar Minha Conta'
+  unhappy: 'Está Triste :(?'
+  back: 'Voltar'
