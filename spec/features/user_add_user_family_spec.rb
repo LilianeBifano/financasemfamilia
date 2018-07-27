@@ -31,7 +31,7 @@ feature 'User add user in family' do
   scenario 'and not double users' do
     family = create(:family)
     user = create(:user, family: family)
-    user2 = create(:user, email: 'marcelo@financeiro.com', family: family)
+    create(:user, email: 'marcelo@financeiro.com', family: family)
 
     visit root_path
     within('.navbar') do
