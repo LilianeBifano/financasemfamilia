@@ -15,6 +15,20 @@ class ProfilesController < ApplicationController
     end
   end
 
+  def edit
+    @user = current_user
+  end
+
+  def update
+    if @user.update(user_params)
+      flash[:notice] = 'Usuário atualizada com sucesso'
+      redirect_to profile_path
+    else
+      flash[:alert] = 'Campos em branco'
+      render 'edit'
+    end
+  end
+
   private
 
   def user_params
