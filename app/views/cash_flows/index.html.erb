@@ -8,7 +8,7 @@
     <th>Descrição Ganhos</th>
     <th>Descrição Gastos</th>
   </tr>
-  
+
     <tr>
       <% @cfs.each do |cf| %>
         <td> <%= I18n.localize cf.date, format: :custom%> </td>
@@ -17,7 +17,7 @@
         <td> <%= cf.revenue_type %> </td>
         <td> <%= cf.expense_type %> </td>
       <% end%>
-    </tr> 
+    </tr>
 </table>
 <p>Total de ganhos: <%= number_to_currency CashFlow.calculate_revenue_amount(@cfs) %> </p>
 <p>Total de gastos: - <%= number_to_currency CashFlow.calculate_expense_amount(@cfs) %> </p>

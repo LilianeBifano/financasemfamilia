@@ -6,7 +6,7 @@ class RevenuesController < ApplicationController
   end
 
   def create
-    @revenue = Revenue.new(revenue_params)
+    @revenue = current_user.revenues.new(revenue_params)
     @revenue_types = RevenueType::ALL
     if @revenue.save
       flash[:notice] = 'Entrada de recursos cadastrada com sucesso!'
