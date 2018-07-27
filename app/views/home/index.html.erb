@@ -15,34 +15,19 @@
     datasets: [{
         data: <%= @chart_data.values %>,
 
-  backgroundColor: generateColors(<%= @chart_data.keys.count %>)
+  backgroundColor: ['#007bff', '#6610f2', '#6f42c1', '#e83e8c', '#dc3545', '#fd7e14', '#ffc107', '#28a745', '#20c997', '#17a2b8', '#343a40', '#00fdff']
         }],
     // These labels appear in the legend and in the tooltips when hovering different arcs
     labels: <%= raw @chart_data.keys %>
 
   };
 
- function generateColors(total) {  
-    var cor_array = [];
-    for(i = 0; i < total; i++) {
-      cor_array.push(getRandomColor());
-    }
-    return cor_array;
-  }
 
 var myPieChart = new Chart(ctx,{
     type: 'doughnut',
     data: data
 });
-  
-  function getRandomColor() {
-    var letters = '0123456789ABCDEF';
-    var color = '#';
-    for (var i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-  }
+
 </script>
 
 
@@ -52,32 +37,18 @@ var myPieChart = new Chart(ctx,{
     datasets: [{
         data: <%= @chart_data2.values %>,
 
-  backgroundColor: generateColors(<%= @chart_data2.keys.count %>)
+  backgroundColor: ['#3c9250', '#28a745', '#20c997', '#4879ad', '#007bff', '#6610f2', '#6f42c1']
         }],
     // These labels appear in the legend and in the tooltips when hovering different arcs
     labels: <%= raw @chart_data2.keys %>
 
   };
 
- function generateColors(total) {  
-    var cor_array = [];
-    for(i = 0; i < total; i++) {
-      cor_array.push(getRandomColor());
-    }
-    return cor_array;
-  }
 
 var myPieChart = new Chart(ctx,{
     type: 'doughnut',
     data: data
 });
   
-  function getRandomColor() {
-    var letters = '0123456789ABCDEF';
-    var color = '#';
-    for (var i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-  }
+
 </script>
