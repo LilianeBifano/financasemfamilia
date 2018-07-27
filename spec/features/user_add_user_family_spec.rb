@@ -26,7 +26,5 @@ feature 'User add user in family' do
     expect(page).to have_content('Usuário Cadastrado com Sucesso')
     expect(page).to have_content("Familia: #{family.name}")
     expect(family.users.count).to eq(2)
-
-
   end
 end
