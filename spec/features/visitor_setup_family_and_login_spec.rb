@@ -19,7 +19,10 @@ feature 'Visitor setup family and login' do
     click_on 'Cadastrar Familia'
 
     fill_in 'Nome da Familia', with: 'Silva'
-    fill_in 'Quantidade de Pessoas', with: '5'
+    fill_in 'Quantidade de Pessoas', with: 5
+    fill_in 'CEP', with: '13200-000'
+    fill_in 'Objetivo', with: 'Carro proprio'
+    fill_in 'Valor do objetivo', with: 10_000
     click_on 'Salvar'
 
     expect(page).to have_content('pedro@financeiro.com')

@@ -7,6 +7,10 @@ pt-BR:
         target: 'Objetivo'
         target_value: 'Valor do objetivo'
         guest_total: 'Quantidade de Pessoas'
+  activerecord:
+    errors:
+      messages:
+        record_invalid: 'A validação falhou: %{errors}'
   new_family: 'Cadastro de Família'
   submit: 'Enviar'
   activerecord:
