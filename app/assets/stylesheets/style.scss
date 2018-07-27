@@ -1,0 +1,101 @@
+html, body
+{
+  height: 100%;
+}
+body{
+  background: #fff;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.navbar, .navbar a {
+  color: #fff;
+}
+
+nav + * {
+  margin-top: 60px;
+}
+
+
+.container.main{
+  background: #fff;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  padding: 10px 50px 50px;
+  min-height: 900px;
+}
+
+.bg-light {
+  background-color: #ffffff !important;
+}
+
+.logo{
+  width: 120px;
+}
+
+
+.box-ad {
+  border: 1px solid #0F7986;
+  border-radius: 20px;
+  padding: 10px;
+  margin-top: 20px;
+
+  &:hover {
+      box-shadow: 1px 1px 20px 4px rgba(129, 159, 185, 0.54);
+  }
+
+  h3 {
+    text-align: center;
+    border-bottom: 1px solid #0F7986;
+    margin-bottom: 20px;
+  }
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #137b88;
+    border-color: #137b88;
+  &:hover{
+    color: #fff;
+    background-color: #137b88;
+    border-color: #137b88;
+  }
+  &:active{
+    color: #fff;
+    background-color: #137b88;
+    border-color: #137b88;
+  }
+  &:focus{
+    color: #fff;
+    background-color: #137b88;
+    border-color: #137b88;
+  }
+}
+
+.footer-bottom {
+    background-color: #408b10 !important;
+    min-height: 30px;
+    width: 100%;
+}
+.copyright {
+    color: #fff;
+    line-height: 30px;
+    min-height: 30px;
+    padding: 7px 0;
+}
+.design {
+    color: #fff;
+    line-height: 30px;
+    min-height: 30px;
+    padding: 7px 0;
+    text-align: right;
+}
+
+.bg-dark, .bg-dark a {
+  background-color: #3f8b11 !important;
+  color: #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color:  #fff;
+}

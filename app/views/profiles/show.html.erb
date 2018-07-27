@@ -1,0 +1,21 @@
+<h4> Minhas Configurações </h4>
+
+<h3>Meu Usuário</h3>
+
+<div>
+  <p><%= current_user.email %></p>
+</div>
+
+<h3>Minha Família</h3>
+
+<div>
+  <p>Familia: <%= current_user.family.name%></p>
+</div>
+
+<h3>Usuários da Familia</h3>
+<div>
+  <% current_user.family.users.each do|u|%>
+    <p>Nome: <%= u.name%> Email: <%= u.email%></p>
+  <% end %>
+</div>
+<%= link_to 'Cadastrar Usuário', new_user_path %>

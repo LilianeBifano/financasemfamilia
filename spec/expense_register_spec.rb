@@ -2,7 +2,8 @@ require 'rails_helper'
 
 feature 'Register of expenses' do
   scenario 'successfully' do
-    user = create(:user, email: 'teste@gmail.com', password: '123456')
+    family = create(:family)
+    user = create(:user, family: family)
 
     visit root_path
     within('.navbar') do
@@ -10,7 +11,7 @@ feature 'Register of expenses' do
     end
 
     fill_in 'Email', with: user.email
-    fill_in 'Senha', with: '123456'
+    fill_in 'Senha', with: user.password
     within('.form-actions') do
       click_on 'Entrar'
     end
@@ -26,11 +27,7 @@ feature 'Register of expenses' do
 
     click_on 'Registrar'
 
-    expect(page).to have_css('p', text: 'Saída de recursos cadastrada')
-    expect(page).to have_css('p', text: 'Data: 01/08/2018')
-    expect(page).to have_css('p', text: 'Descrição: Compra de calça jeans')
-    expect(page).to have_css('p', text: 'Valor: R$109,70')
-    expect(page).to have_css('p', text: 'Tipo: Vestuário e acessórios')
+    expect(page).to have_content('Saída de recursos cadastrada')
   end
 
   scenario 'insuccessfully' do

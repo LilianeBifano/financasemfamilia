@@ -13,6 +13,7 @@ feature 'visit_home_index' do
   end
 
   scenario 'not view login' do
+    create(:family)
     user = create(:user)
 
     visit root_path
@@ -29,7 +30,7 @@ feature 'visit_home_index' do
     expect(page).to have_content('Minhas Configurações')
     expect(page).to have_content('Inserir Gastos')
     expect(page).to have_content('Inserir Ganhos')
-    expect(page).to have_content('Fechar o Mês')
+    expect(page).to have_content('Fluxo Mensal')
     expect(page).not_to have_content('Entrar')
   end
 end
