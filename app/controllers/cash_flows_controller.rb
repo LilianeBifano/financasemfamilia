@@ -4,7 +4,7 @@ class CashFlowsController < ApplicationController
     @date = Date.parse(params[:date] || Time.zone.today.to_s)
     @cfs = []
     (@date.beginning_of_month..@date.end_of_month).each do |day|
-      cf = CashFlow.new(day)
+      cf = CashFlow.new(day, current_user)
       @cfs << cf
     end
   end

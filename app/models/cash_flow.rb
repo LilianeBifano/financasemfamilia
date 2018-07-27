@@ -2,13 +2,14 @@ class CashFlow
   attr_accessor :date, :expense_value, :revenue_value,
                 :expense_type, :revenue_type
 
-  def initialize(date)
+  def initialize(date, user)
     @date = date
     @expense_type = ''
     @revenue_type = ''
+    family_users = user.family.users
 
-    expenses = Expense.where(date: date)
-    revenues = Revenue.where(date: date)
+    expenses = Expense.where(date: date, user: family_users)
+    revenues = Revenue.where(date: date, user: family_users)
 
     revenues_item(revenues)
     expenses_item(expenses)

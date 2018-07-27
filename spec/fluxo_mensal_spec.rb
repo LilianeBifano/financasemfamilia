@@ -3,7 +3,7 @@ require 'rails_helper'
 feature 'The app generate a partial cash flow' do
   scenario 'successfully' do
     user = create(:user, password: '123456')
-    user2 = create(:user, email: 'test8428@gmail.com')
+    user2 = create(:user, email: 'test8428@gmail.com', family: user.family)
     create(:revenue, user: user)
     create(:expense, user: user)
     create(:expense, date: '01/07/2018',
