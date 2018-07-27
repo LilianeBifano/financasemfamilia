@@ -1,3 +1,17 @@
-<h1> Minhas Configurações </h1>
+<h4> Minhas Configurações </h4>
 
-<p> <%=link_to 'Cadastrar Familia', new_family_path %> </p>
+<h3>Meu Usuário</h3>
+
+<div>
+  <p><%= current_user.email %></p>
+</div>
+
+<h3>Minha Família</h3>
+
+<div>
+  <p><%= current_user.family.name%></p>
+</div>
+
+<h3>Usuários da Familia</h3>
+
+<%= link_to 'Cadastrar Usuário', new_user_registration_path %>

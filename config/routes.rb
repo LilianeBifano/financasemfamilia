@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   root to: 'home#index'
   
   get 'meu_perfil', to: 'profiles#show', as: 'profile'
+  get 'novo_usuario', to: 'profiles#create', as: 'new_user'
   get 'minha_familia', to: 'families#show', as: 'my_family'
   
 end
