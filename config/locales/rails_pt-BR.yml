@@ -43,6 +43,7 @@ pt-BR:
       long: "%d de %B de %Y"
       short: "%d de %B"
       custom: "%d/%m/%Y %a"
+      custom2: "%B de %Y"
     month_names:
     -
     - Janeiro

@@ -29,6 +29,7 @@ feature 'visit_home_index' do
     expect(page).to have_content('Minhas Configurações')
     expect(page).to have_content('Inserir Gastos')
     expect(page).to have_content('Inserir Ganhos')
+    expect(page).to have_content('Fluxo Mensal')
     expect(page).not_to have_content('Entrar')
   end
 end
