@@ -2,9 +2,9 @@
 <%= form_tag(cash_flow_path, method: "get") do %>
   <%= label_tag(:date, "Escolha o mês para consulta:") %>
   <%= text_field_tag(:date) %>
-  <%= submit_tag("Buscar") %>
+  <%= submit_tag("Buscar", class:"btn btn-secondary") %>
 <% end %>
-
+<br>
 
 <h3 class="text-center"><%= I18n.localize @date, format: :custom2 %> </h3>
 
