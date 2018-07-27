@@ -12,6 +12,8 @@
   <p>Familia: <%= current_user.family.name%></p>
 </div>
 
+<%= link_to 'Editar Família', edit_family_path %>
+
 <h3>Usuários da Familia</h3>
 <div>
   <% current_user.family.users.each do|u|%>

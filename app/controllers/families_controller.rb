@@ -20,6 +20,23 @@ class FamiliesController < ApplicationController
     @family = current_user.family
   end
 
+  def edit
+    @family = current_user.family
+  end
+
+  def update
+    @family = current_user.family
+    
+    if @family.update(family_params)
+      flash[:notice] = 'Sua Familia foi atualizada com sucesso.'
+      redirect_to my_profile
+    else
+      flash[:alert] = 'Campos em branco'
+      render 'edit'
+    end
+
+  end
+
   private
 
   def family_params

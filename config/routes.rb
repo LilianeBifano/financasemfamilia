@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :expenses, only: [:new, :create]
   resources :revenues, only: [:new, :create]
-  resources :families, only: [:new, :create, :index]
+  resources :families, only: [:new, :create, :index, :edit, :update]
 
   get 'cash_flow', to: 'cash_flows#index'
   devise_for :users
