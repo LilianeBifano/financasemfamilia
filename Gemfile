@@ -7,9 +7,6 @@ gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
 # Use sqlite3 as the database for Active Record
-group :production do
-  gem 'pg', '~>0.18'
-end
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -48,11 +45,16 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'rspec-rails', '~> 3.7'
   gem 'rubocop', '~> 0.58.1', require: false
+  # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
 end
 
 group :test do
   gem 'simplecov', require: false
+end
+
+group :production do
+  gem 'pg', '~>0.18'
 end
 
 group :development do
@@ -67,6 +69,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
+
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
