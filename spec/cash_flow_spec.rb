@@ -10,16 +10,8 @@ feature 'The app generate a partial cash flow' do
                      expense_type: 'Vestuário e acessórios',
                      value: '50,00')
 
+    login_as(user)
     visit root_path
-    within('.navbar') do
-      click_on 'Entrar'
-    end
-
-    fill_in 'Email', with: user.email
-    fill_in 'Senha', with: '123456'
-    within('.form-actions') do
-      click_on 'Entrar'
-    end
 
     within('.navbar') do
       click_on 'Inserir Ganhos'
