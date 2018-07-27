@@ -1,8 +1,10 @@
 
-<%= form_tag(cash_flow_path, method: "get") do %>
-  <%= label_tag(:date, "Escolha o mês para consulta:") %>
-  <%= text_field_tag(:date) %>
-  <%= submit_tag("Buscar", class:"btn btn-secondary") %>
+<%= form_tag(cash_flow_path, method: "get", class:"form-inline") do %>
+  <div class="form-group mx-sm-3 mb-2">
+  <%= label_tag(:date, "Escolha o mês para consulta: ", class:"mr-2") %>
+  <%= text_field_tag(:date, nil, class:"form-control", placeholder:"MM/AAAA") %>
+  </div>
+  <%= submit_tag("Buscar", class:"btn btn-secondary mb-2") %>
 <% end %>
 <br>
 
