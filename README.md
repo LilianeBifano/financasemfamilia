@@ -1,6 +1,8 @@
 Finanças em Família
 =======
 
+https://travis-ci.org/LilianeBifano/financasemfamilia.svg?branch=master
+
 **Finanças em Família** é uma aplicação que tem por objetivo aumentar o controle financeiro das famílias, elaborando, substancialmente:
 - Análises visual dos principais gastos e ganhos da família;
 - Caixa consolidado da família.
